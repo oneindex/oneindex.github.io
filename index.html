@@ -3,7 +3,7 @@
 		<title>oneindex 安装桥接页</title>
 	</head>
 	<body>
-		<a href="" id="direct">点击继续安装</a>
+		如果长时间未跳转，请点击:<a href="" id="direct">继续安装</a>
 		<script>
 			function get(variable){
 			       var query = window.location.search.substring(1);
@@ -17,9 +17,7 @@
 			var url = get('state');
 			var code = get('code');
 			document.getElementById('direct').href = decodeURIComponent(url)+"?code="+code;
-			setTimeout(function(){
-				window.location = decodeURIComponent(url)+"?code="+code
-			}, 1000);
+			window.location = decodeURIComponent(url)+"?code="+code;
 		</script>
 	</body>
 </html>
