@@ -1,5 +1,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-	<head></head>
+	<head>
+		<title>oneindex 安装桥接页</title>
+	</head>
 	<body>
 		<a href="" id="direct">点击继续安装</a>
 		<script>
@@ -14,7 +16,10 @@
 			}
 			var url = get('state');
 			var code = get('code');
-			document.getElementById('direct').src = decodeURIComponent(url)+"?code="+code;
+			document.getElementById('direct').href = decodeURIComponent(url)+"?code="+code;
+			setTimeout(function(){
+				window.location = decodeURIComponent(url)+"?code="+code
+			}, 1000);
 		</script>
 	</body>
 </html>
