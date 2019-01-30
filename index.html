@@ -1,6 +1,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 	<head></head>
 	<body>
+		<a href="" id="direct">点击继续安装</a>
 		<script>
 			function get(variable){
 			       var query = window.location.search.substring(1);
@@ -13,7 +14,7 @@
 			}
 			var url = get('state');
 			var code = get('code');
-			alert(url);
+			document.getElementById('direct').src = decodeURIComponent(url)+"?code="+code;
 		</script>
 	</body>
 </html>
